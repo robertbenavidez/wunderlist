@@ -13,7 +13,7 @@ function findUsers() {
 }
 
 function findUserById(id) {
-    return db('users').where({id})
+    return db('users').where({id}).first()
 }
 
 function deleteUser(id) {

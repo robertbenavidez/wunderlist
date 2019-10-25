@@ -19,14 +19,6 @@ exports.up = function(knex) {
         tbl
             .boolean('recurring')
             .defaultTo(false)
-        tbl
-            .integer('user_id')
-            .unsigned()
-            .notNullable()
-            .references('id')
-            .inTable('users')
-            .onUpdate('CASCADE')
-            .onDelete('CASCADE');
     })
 };
 
